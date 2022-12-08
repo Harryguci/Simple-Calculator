@@ -9,3 +9,16 @@
   <li>Morgan</li>
   <li>Handlebars template engine</li>
 </ul>
+
+<h2>Project structure</h2>
+<pre>
+root -- index.js
+    |-- node_modules
+    |-- public -- css -- main.css
+                    |--- home.css
+            |---- javascript ------ home.js
+    |-- routes -- index.js
+    |-- views --- home.hbs
+            |---- layout ----- main.hbs
+
+</pre>
