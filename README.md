@@ -27,6 +27,5 @@ root -- index.js
 
 </pre>
 
-
 <h2>Run program</h2>
-<p>In terminal:<i style="color: yellow;">npm start</i><p>
+<p>In terminal:<i style="color: yellow; margin-left: 10px;">  npm start</i><p>
