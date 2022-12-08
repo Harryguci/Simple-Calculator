@@ -1,0 +1,149 @@
+.frame {
+  width: 90vw;
+  max-width: 700px;
+  display: block;
+  background: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+.frame__main .heading {
+  margin-bottom: 5px;
+}
+.w-100 {
+  width: 100%;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+.px-1 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.d-flex {
+  display: flex !important;
+}
+.frame__main span {
+  color: gray;
+  margin: 0 1rem;
+  font-size: 1rem;
+  display: block;
+}
+.frame__main span:first-child {
+  margin-left: 0;
+}
+.frame__main div:has(.heading) {
+  margin-bottom: 30px;
+}
+.frame__main {
+  padding: 15px;
+}
+.frame__main #statement {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  background: rgb(50, 50, 100);
+}
+.frame__main button {
+  padding: 10px 20px;
+  margin: 0 auto;
+  background: rgb(100, 100, 200);
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.frame__main button:hover {
+  background: rgb(150, 150, 250);
+}
+
+.dialog {
+  position: absolute;
+  width: fit-content;
+  top: 30px;
+  left: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+
+  animation-name: dialog-show;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.dialog__head {
+  padding: 10px 20px;
+  background-color: rgb(100, 100, 200);
+}
+.dialog__head * {
+  color: white;
+}
+
+.dialog__main {
+  padding: 20px;
+}
+.dialog__main .result-value {
+  font-size: 1.5rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.dialog__foot {
+  display: block;
+  position: relative;
+  width: 100%;
+  background: rgba(255, 150, 150, 1);
+  height: 10px;
+  overflow: hidden;
+}
+.dialog__foot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 100, 50, 1);
+  transform: translateX(-100%);
+
+  animation-name: time-counter;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes time-counter {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dialog-show {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes dialog-hidden {
+  100% {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .frame__main span:not(:first-child) {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
