@@ -4,7 +4,7 @@
 <ul>
   <li>Node js</li>
   <li>Express</li>
-  <li>Npmn</li>
+  <li>Npm</li>
   <li>Nodemon</li>
   <li>Morgan</li>
   <li>Handlebars template engine</li>
