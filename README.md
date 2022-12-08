@@ -26,3 +26,7 @@ root -- index.js
             |---- layout ----- main.hbs
 
 </pre>
+
+
+<h2>Run program</h2>
+<p>In terminal:<i style="color: yellow;">npm start</i><p>
